@@ -13,4 +13,8 @@ The solution we intend to roll-out should be a long-term benefit, as opposed to 
 
 ### Complexity Spectrums Chart
 
-![Complexity Spectrums](./Complexity Spectrums.png)
+<img src="./Complexity%20Spectrums.png" alt="Complexity Spectrums Diagram" width="400"/>
+
+### Assignment Submission
+
+The [PDF File](./Assignment%201.pdf) is not yet complete, a simple sketch roughly visualizing the issue will be added later on.
