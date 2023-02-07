@@ -49,3 +49,9 @@ Framing Question
 
 *   **What are the factors involved in change in Mentality/Knowledge on Waste (& Consequences)?**
 *   What are the forces involved in Waste Management and how to approach those to achieve change?
+
+Final Revised Versions
+----------------------
+
+* ['Alpha'-Version](./Assignment%202%20-%20Alpha.pdf)
+* ['Beta'-Version](./Assignment%202%20-%20Beta.pdf)
