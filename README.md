@@ -5,8 +5,12 @@
 ## [Meeting 2: 2023-02-05](./Meeting-02/)
 - Star Selection
     - Guiding Star: Project Goal
-    - Near Star: Short<sup>*</sup>-term Goal that aligns with the Guiding Star
+    - Near Star: Short<sup>1</sup>-term Goal that aligns with the Guiding Star
 - Framing Question
+## [Meeting 3: 2023-02-12](./Meeting-03/)
+- Forces Discovery
+- Themes Selection & Organization
+- SAT Analyses for the Themes
 
-<sup>*</sup> Short-term in Systems Practice may go on for as long as 10 years
+<sup>1</sup> Short-term in Systems Practice may go on for as long as 10 years
 and depends on the total scale of the project.
