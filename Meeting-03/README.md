@@ -3,7 +3,7 @@ Forces in the Waste Management Process
 
 Forces can be people, institutions or processes (or their results) themselves, i.e.: 
 
-‘The Government’, ‘The lack of education among commonfolk’, ‘Pres. Marcos Jr.’
+‘The Government’, ‘The lack of education among commonfolk’
 
 ### Enabler Forces
 
