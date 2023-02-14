@@ -1,0 +1,5 @@
+# Ignore Build Files
+**/build/*
+
+# Keep build/*.pdf files for online preview purposes
+!**/build/*.pdf

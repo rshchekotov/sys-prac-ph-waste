@@ -1,0 +1,390 @@
+\documentclass{article}
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage{needspace}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+
+\graphicspath{{./img/}}
+\hypersetup{
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+}
+
+% Metadata
+\author{Roman Shchekotov}
+\title{SAT Analyses}
+\date{\today}
+
+% Generate '@...'-commands for later use
+\makeatletter
+
+% Environment for the SAT Analysis
+\newenvironment{SATAnalysis}{
+  \vspace{0.25cm}
+  \begin{tabular}{>{\raggedright\arraybackslash}p{0.45\textwidth} >{\raggedleft\arraybackslash}p{0.45\textwidth}}
+  {\Large \textsc{Upstream Causes}} & {\Large \textsc{Downstream Effects}}\\
+}{
+  \bottomrule
+  \end{tabular}
+  \vspace{0.5cm}
+}
+\newcommand{\SATStructural}{\midrule\multicolumn{2}{c}{\Large \textsc{Structural}}\\ \midrule}
+\newcommand{\SATAttitudinal}{\midrule\multicolumn{2}{c}{\Large \textsc{Attitudinal}}\\ \midrule}
+\newcommand{\SATTransactional}{\midrule\multicolumn{2}{c}{\Large \textsc{Transactional}}\\ \midrule}
+\newcommand{\SATCause}[1]{#1 & \\}
+\newcommand{\SATEffect}[1]{ & #1\\}
+\newcommand{\SATCauseEffect}[2]{#1 & #2\\}
+
+% 2x Newlines
+\newcommand{\nn}{\vspace{\baselineskip}\\}
+% Header Function
+\newcommand{\showtitle}{\begin{center}\textbf{\Huge\textsc{\@title}}\end{center}}
+% Highlight Enabling / Inhibiting Theme
+\newcommand{\hletheme}[1]{\textbf{\color{teal}{#1}}}
+%\newcommand{\hlletheme}[2]{\textbf{\color{teal}\href{#2}{#1}}}
+\newcommand{\hlitheme}[1]{\textbf{\color{purple}{#1}}}
+
+% External Link Graphic
+\newcommand{\ExternalLink}{%
+  \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+    \begin{scope}[x=1ex, y=1ex]
+      \clip (-0.1,-0.1) 
+        --++ (-0, 1.2) 
+        --++ (0.6, 0) 
+        --++ (0, -0.6) 
+        --++ (0.6, 0) 
+        --++ (0, -1);
+      \path[draw, 
+        line width = 0.5, 
+        rounded corners=0.5] 
+        (0,0) rectangle (1,1);
+    \end{scope}
+    \path[draw, line width = 0.5] (0.5, 0.5) -- (1, 1);
+    \path[draw, line width = 0.5] (0.6, 1) -- (1, 1) -- (1, 0.6);
+  }
+}
+% External Link Macro
+\newcommand{\ehref}[2]{\href{#1}{#2 \ExternalLink}}
+
+\begin{document}
+\showtitle
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Recycle}
+\end{figure}
+\tableofcontents
+
+\newpage
+
+\section{Theme Collection}
+\subsection{Enablers}
+The following themes are considered to be ``enablers'' for the topic of
+``Ecological waste management in the Philippines''.
+
+\Needspace{8\baselineskip}
+\subsubsection{Care of the environment}
+\label{subsubsec:care-of-the-environment}
+The topic `care of the environment' is of utmost
+\hletheme{importance to the youth and young adults}, as that directly affects
+their future lifestyle and that of future generations.
+Especially the youth, a global example of which would be 
+\ehref{https://en.wikipedia.org/wiki/Greta_Thunberg}{Greta Thunberg},
+is rather passionate and active in the topic of environmental protection.
+\nn
+This care for the environment is not only limited to the youth.
+These movements \hletheme{attract volunteers from all corners of the world}
+and lead to a collaborative effort to protect the environment with
+knowledge, experiences and perspectives from all over the world. 
+Especially from the places where some of the issues faced in the 
+Philippines are not as prevalent and solutions are known and implemented.
+\nn
+Aside from helping hands coming from outside the Philippines, there
+also are \hletheme{local initiatives with insight on the consequences} of
+the issues.
+Not only do the participants of such have the aspiration to solve the
+problems, such as the other groups mentioned above, but they also have
+to deal with the consequences of the issues on a daily basis.
+
+\Needspace{8\baselineskip}
+\subsubsection{Low waste mentality}
+\label{subsubsec:low-waste-mentality}
+There already exist plenty of \hletheme{low waste concepts \& practices}
+that are being implemented worldwide and also exist to some extent in
+the Philippines.
+In particular concepts such as the
+\ehref{https://en.wikipedia.org/wiki/Waste_hierarchy}{Waste Hierarchy}
+are pretty well known and contribute to some of the low waste mentality.
+\nn
+Naturally, there is also a business aspect that was born from the
+low waste mentality.
+Entrepeneurs started to create \hletheme{sustainable products} that
+either reduce the waste produced (i.e. avoiding packaging where possible)
+or make an existing product more sustainable (i.e. reusable coffee cups).
+\nn
+Such \hletheme{innovations lead by the ``environmentalists''} are
+what brings new concepts and awareness to the general public.
+Through conventions and other events, the mentality spreads and
+more people become aware of the issue.
+
+\Needspace{8\baselineskip}
+\subsubsection{Reinforcement of a sustainable lifestyle through legislation}
+\label{subsubsec:reinforcement-of-a-sustainable-lifestyle-through-legislation}
+In order to face the issues the Republic of the Philippines is facing,
+several legislations have been passed that aim to solve the problems.
+An example of such is the
+\ehref{https://web.archive.org/web/20221212111636/https://www.officialgazette.gov.ph/2001/01/26/republic-act-no-9003-s-2001/}{\hletheme{Republic Act No. 9003}},
+also known as the ``Ecological Solid Waste Management Act of 2000''.
+It defines the procedures and institutions necessary to mitigate the
+problems of waste management in the Philippines.
+\nn
+Another instance of legislation that aims to solve the issues is the
+\ehref{https://web.archive.org/web/20230213214528/https://www.officialgazette.gov.ph/2022/04/15/republic-act-no-11698/}{\hletheme{Republic Act No. 11698}}, 
+which amends the previous legislation and aims to further improve 
+the waste management in the Philippines by introducing the ``polluter pays'' 
+principle.
+These acts are also partially a result of international pressure, such
+as the UN and in particular their 11th Sustainable Development Goal
+\footnote{\ehref{https://www.un.org/sustainabledevelopment/cities/}{UN Sustainable Development Goal 11}}.
+\nn
+Lastly, another highly important step towards a sustainable lifestyle is
+a functioning \hletheme{Garbage Collection \& Recycling System}, which
+is also a government responsibility and is therefore also covered by
+the two Acts mentioned above.
+
+
+\Needspace{8\baselineskip}
+\subsubsection{Access to information}
+\label{subsubsec:access-to-information}
+A huge step towards the desired outcome is also achieved through the
+\hletheme{globally available access to information}. We live in a time
+where information is readily available to the vast majority of the world,
+which makes finding solutions to problems significantly easier.
+\nn
+This information becomes even more impactful when taught by people who
+have experience with the respective topic and can \hletheme{share the 
+knowledge through education}.
+That way the information is not only available, but also understood and
+can be applied in the given situation.
+
+\subsection{Inhibitors}
+The following themes are considered to be ``inhibitors'' for the topic of
+``Ecological waste management in the Philippines''.
+
+\Needspace{8\baselineskip}
+\subsubsection{Lack of executive action backing up legislation}
+\label{subsubsec:lack-of-executive-action-backing-up-legislation}
+Although there are several legislations that aim to solve the issues
+faced by the Republic of the Philippines, there is a \hlitheme{lack 
+of government action} to enforce the legislation.
+\nn
+This can be seen in various ways, such as the \hlitheme{need for more
+designated trash bins}.
+Separating the trash into different categories is a crucial step in
+the waste management process, which is why it is important to have
+trash bins that would allow at least the separation of bio-degradable,
+recyclable and non-recyclable waste.
+\nn
+Another example of a lack of government action is the \hlitheme{poor
+garbage collection schedule and system}.
+Distant towns and villages are often not visited by the garbage trucks
+and therefore have to wait for a longer period of time until their
+waste is collected.
+In such situations the waste is often left on the streets or
+illegal dumping sites, which is counterproductive to the achievement
+of our goal.
+
+\Needspace{8\baselineskip}
+\subsubsection{Lack of awareness \& education}
+\label{subsubsec:lack-of-awareness-education}
+Thanks to the internet the access to information is easier than ever,
+and yet a lot of people are not aware of the consequences of simple
+things, such as littering.
+People generally do not have a reason to look up information about
+the topic of waste management, thus there is a \hlitheme{need in public
+information education campaigns}.
+\nn
+Corelating to the lack of awareness is also the \hlitheme{insufficience
+of insight on the relationships: environment $\Leftrightarrow$ human
+health and survival}.
+The environment is a crucial part of our lives and yet we often do not
+realize how much we depend on it.
+It's pollution and degradation can have a huge impact on our health
+starting from making it impossible to breathe fresh air,
+such as is seen in some industrial parts of China
+\footnote{\ehref{https://www.who.int/china/health-topics/air-pollution}{WHO: Air pollution in China}},
+to poisoning food and water sources
+\footnote{i.e.: \ehref{https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health}{WHO: Lead Poisoning}}.
+\nn
+There also is the aspect of \hlitheme{``no knowledge of other life''}.
+Since there never has been a proper system of waste management in the
+Philippines, people are not used to the idea of recycling and reusing
+materials.
+Moreover, why would you need to change your attitude towards waste
+management when it hasn't been an issue in the past?
+The change of habits is a difficult process and requires at least some
+motivation from each individual to succeed, which has yet to be achieved.
+
+\Needspace{8\baselineskip}
+\subsubsection{Individualistic mentality}
+\label{subsubsec:individualistic-mentality}
+The mentality of each individual is a crucial factor in the success of
+the broad and sustained change for the sake of the environment.
+Often a person has \hlitheme{too much distance to the problem} to
+realize the consequences of their actions and be farsighted enough to
+understand the lasting impact, especially when it comes to problems
+with such a large scale and slow, but consistent development as the 
+degradation of the environment.
+\nn
+Add to that another aspect of the ``individualistic mentality'':
+\hlitheme{``one person can't make a change''}.
+This is a common thought that is often used as an excuse to not
+change one's behavior, as one's change would not be enough to make a
+difference on a scale that matters.
+
+\subsubsection{Limited access to sustainable products}
+\label{subsubsec:limited-access-to-sustainable-products}
+When it comes to sustainable products produce through innovative
+ideas and technologies brought forward by environmental-friendly
+companies, the \hlitheme{limited access to such products} is a huge
+inhibitor to the positive effect it would have on the environment.
+Such products are often more expensive than their non-sustainable
+counterparts, which makes them inaccessible to the vast majority
+of the population.
+Sometimes the issue lies not even in the cost of the product, but
+the local availability instead, as the trend of sustainable products
+is rather new and therefore not yet widespread.
+
+\newpage
+
+\section{Analyses}
+\subsection{\nameref{subsubsec:care-of-the-environment}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Young Generation}{Personal Education [i.e. Talks]}
+  \SATCauseEffect{Local Community Influence}{Environment NGOs \& Volunteers}
+  \SATCauseEffect{International Collaboration}{Educated and Proactive Youth}
+  \SATAttitudinal
+  \SATCauseEffect{Appreciation of the environment}{Support for NGOs}
+  \SATCauseEffect{Desire for a better future}{Collaborative Env. Contributions}
+  \SATTransactional
+  \SATCauseEffect{Community Leaders / Elders}{Environment-conscious leaders}
+  \SATCauseEffect{Environment Influencers}{Environment Influencers}
+  \SATCause{Family influence (childhood upbringing)}
+  \SATCause{Environment Activists}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:low-waste-mentality}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Known Problem \& Awareness of Solutions}{Environmentally Conscious Businesses}
+  \SATCauseEffect{Support with diverse perspectives}{Environmentally Conscious Individuals}
+  \SATEffect{Litterers}
+  \SATAttitudinal
+  \SATCauseEffect{Ethical Motivation to Businesses}{Out of the Box Thinking}
+  \SATCauseEffect{Adaptability of Individuals}{Eco-Attitude Shift}
+  \SATTransactional
+  \SATCauseEffect{Environmental Groups}{Non-Profit Organizations}
+  \SATCauseEffect{Forward-thinking Businesses}{Non Government Organizations}
+  \SATCauseEffect{Foreign Volunteers}{Environmental Activists}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:reinforcement-of-a-sustainable-lifestyle-through-legislation}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Communities \& Towns}{Law Enactment}
+  \SATCauseEffect{Budget Appropriation}{Waste Man. Infrastructure Expansion}
+  \SATCauseEffect{Law Enactment}{Decrease in Polluting Businesses}
+  \SATAttitudinal
+  \SATCauseEffect{Bureacratic Approach}{Supportive Entities (implementing change)}
+  \SATCauseEffect{International Pressure}{Defiant Entities (resisting change)}
+  \SATEffect{Neutral Entities (no inconvenience by change)}
+  \SATEffect{Openness to Partnerships}
+  \SATTransactional
+  \SATCauseEffect{Government}{Supportive Communities}
+  \SATCauseEffect{Local Governers (Town Mayors, etc.)}{Defiant Communities}
+  \SATCause{Unified Community Voice}
+  \SATCause{United Nations}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:access-to-information}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Internet Access}{Education on the Web}
+  \SATCauseEffect{On-/Offline Education}{Educated Youth}
+  \SATEffect{Broader Availability of products}
+  \SATEffect{International Collaboration}
+  \SATAttitudinal
+  \SATCauseEffect{Curiosity}{Knowledge Exchange (Lakbay Aral)}
+  \SATCauseEffect{Receptiveness}{Improved Problem Solving Abilities}
+  \SATEffect{Broader Perspective \& Understanding}
+  \SATTransactional
+  \SATCauseEffect{Educational Institutions}{Educated Specialists}
+  \SATCause{MOOC Professors \& TA's}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:lack-of-executive-action-backing-up-legislation}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Lack of Designated Trash Bins}{Disorganized Waste Management}
+  \SATCauseEffect{Poor Garbage Collection Schedule \& System}{Formation of Illegal Dumpsites}
+  \SATCauseEffect{Missing Recycling Infrastructure}{Poisoning of the Env. with Toxic Waste}
+  \SATEffect{Impossibility for Recycling (missing segregation)}
+  \SATAttitudinal
+  \SATCauseEffect{Prolonged Negligence}{Careless Behavior with Waste}
+  \SATEffect{Provisional Makeshift Solutions}
+  \SATTransactional
+  \SATCauseEffect{Tentative Actions by the Government}{Neglected Remote Areas}
+  \SATEffect{Litterers}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:lack-of-awareness-education}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Lack of public IEC}{Lack of awareness}
+  \SATCauseEffect{Lack of awareness}{Lack of education}
+  \SATCauseEffect{Lack of insight into Human $\Leftrightarrow$ Nature relations}{}
+  \SATAttitudinal
+  \SATCauseEffect{No knowledge of other life}{Careless Attitude}
+  \SATCauseEffect{``If it's not broken, don't fix it''}{Ignorance}
+  \SATTransactional
+  \SATCauseEffect{Each Individual}{Careless Individuals}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:individualistic-mentality}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Overwhelming Scale of the Problem}{Consistent Degradation of the Environment}
+  \SATAttitudinal
+  \SATCauseEffect{Distance to the Issue}{Ignorance of Long-Term Effects}
+  \SATCauseEffect{``One person can't make a difference''}{Preference of Short-Term Solutions}
+  \SATEffect{Individualistic World View}
+  \SATTransactional
+  \SATCauseEffect{Each Individual}{Overwhelmed Citizens}
+  \SATEffect{Ignorant Citizens}
+\end{SATAnalysis}
+
+\subsection{\nameref{subsubsec:limited-access-to-sustainable-products}}
+\begin{SATAnalysis}
+  \SATStructural
+  \SATCauseEffect{Limited Supply}{Limited Access}
+  \SATCauseEffect{Costly Products}{Low Affordability}
+  \SATEffect{Low Profit Margin for Businesses}
+  \SATAttitudinal
+  \SATCauseEffect{Consumers lacking awareness of alternatives}{Fallback to Non-Sustainable Products}
+  \SATTransactional
+  \SATCauseEffect{Each Individual}{Lack of Support for Sustainable Businesses}
+  \SATCauseEffect{Eco-friendly Businesses}{}
+\end{SATAnalysis}
+
+\end{document}
